@@ -29,31 +29,14 @@ node *current = NULL;
 node *previous = NULL;
 
 /**********************         function prototypes         **********************/
-
-// function returns 1 if Id found and 0 if not found
 int isFound(int studentID);
-
-// function adds student to the student linked list
 void addStudent(const struct student *const ptr);
-
-// function displays the details of all students currently in the system
 void displayStudents(void);
-
-// function searches for a student by their ID and displays their details if found
 void searchStudentByID(int id);
-
-// function updates the details of a student with the given ID
 void updateStudent(int id);
-
-// function calculates and returns the average GPA of all students
 float calculateAverageGPA(void);
-
-// function finds and displays the student with the highest GPA.
 void searchHighestGPA(void);
-
-// function deletes a student from the linked list by their ID
 void deleteStudent(int id);
-
 /***********************************************************************************/
 
 int main(void) {
@@ -126,6 +109,7 @@ int main(void) {
 	return 0;
 }
 
+// function returns 1 if Id found and 0 if not found
 int isFound(int studentID) {
 	// start checking from the first student
 	current = head;
@@ -144,6 +128,7 @@ int isFound(int studentID) {
 	return NOT_FOUND;
 }
 
+// function adds student to the student linked list
 void addStudent(const struct student *const ptr) {
 	//check if ID is already reserved
 	if (isFound(ptr->id)) {
@@ -183,6 +168,7 @@ void addStudent(const struct student *const ptr) {
 	current->next = newStudent;
 }
 
+// function displays the details of all students currently in the system
 void displayStudents(void) {
 	//check if the list is empty
 	if (head == NULL) {
@@ -199,6 +185,7 @@ void displayStudents(void) {
 	}
 }
 
+// function searches for a student by their ID and displays their details if found
 void searchStudentByID(int id) {
 	// if ID found print student information
 	if (isFound(id)) {
@@ -211,6 +198,7 @@ void searchStudentByID(int id) {
 	}
 }
 
+// function updates the details of a student with the given ID
 void updateStudent(int id) {
 	// if ID found update student information
 	if (isFound(id)) {
@@ -229,6 +217,7 @@ void updateStudent(int id) {
 	}
 }
 
+// function calculates and returns the average GPA of all students
 float calculateAverageGPA(void) {
 	// check if the list is empty
 	if (head == NULL) {
@@ -248,6 +237,7 @@ float calculateAverageGPA(void) {
 	return sum / count;
 }
 
+// function finds and displays the student with the highest GPA.
 void searchHighestGPA(void) {
 	// check if the list is empty
 	if (head == NULL) {
@@ -275,6 +265,7 @@ void searchHighestGPA(void) {
 
 }
 
+// function deletes a student from the linked list by their ID
 void deleteStudent(int id) {
 	// if ID found delete student
 	if (isFound(id)) {
