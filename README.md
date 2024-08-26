@@ -6,6 +6,7 @@ This C program is designed to manage student information efficiently. It allows 
 - Displaying all students
 - Searching for a student by ID
 - Updating student details
+- Delete a Student
 - Calculating the average GPA
 - Finding the student with the highest GPA
 
@@ -13,7 +14,9 @@ This C program is designed to manage student information efficiently. It allows 
 
 - **Add New Students**: Easily add new student records to the system.
 - **Display All Students**: View a list of all students currently in the system.
-- **Search by ID**: Find specific student details using their unique ID.
+- **Search by ID**: Find a specific student using their unique ID.
 - **Update Student Details**: Modify existing student information.
-- **Calculate Average GPA**: Compute the average GPA of all students.
-- **Find Highest GPA**: Identify the student with the highest GPA.
+- **Delete a Student**: Remove a student's record based on their ID. 
+- **Calculate Average GPA**: Compute and display the average GPA of all students. 
+- **Find Highest GPA**: Identify and display the student with the highest GPA.
+- **Exit**: Terminate the program.  
